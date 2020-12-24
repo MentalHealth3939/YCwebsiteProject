@@ -6,46 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yolocobi Crafts - Home</title>
     <link href="resources/styles.css" rel="stylesheet">
+    <script src="resources/robot.js" async></script>
+    <link rel="icon" href="resources/images/iso.png">
 </head>
 
 <body class="full-height-grow">
 
-    <div class="background-image-1"></div>
+    <div class="slideshow-container">
+        <div class="slide visible fade background-image-1"></div>
+        <div class="slide visible fade background-image-2"></div>
+        <div class="slide visible fade background-image-3"></div>
+        <div class="slide visible fade background-image-4"></div>
+    </div>
 
     <div class="blur-box">
-        <div class="arrow">
-            <svg id="Capa_1" class="arrow-svg arrow-svg-2" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 595.28 841.89">
-                <defs>
-                    <style>
-                        .cls-1 {
-                            fill: #fff;
-                        }
-                    </style>
-                </defs>
-                <title>Mesa de trabajo 1</title>
-                <path class="cls-1"
-                    d="M117.57,15H40.06A29.06,29.06,0,0,0,11,44.06L201.91,378.15a86,86,0,0,1,0,85.32L11,797.55a29.06,29.06,0,0,0,29.06,29.07h77.51a29.06,29.06,0,0,0,29.06-29.07L337.54,463.47a86,86,0,0,0,0-85.32L146.63,44.06A29.06,29.06,0,0,0,117.57,15Z" />
-                <path class="cls-1"
-                    d="M349.32,20.38h-77.5a29.06,29.06,0,0,0-29.06,29.07L433.67,383.53a86,86,0,0,1,0,85.32L242.76,802.94A29.06,29.06,0,0,0,271.82,832h77.5a29.06,29.06,0,0,0,29.07-29.06l190.9-334.09a86,86,0,0,0,0-85.32L378.39,49.45A29.06,29.06,0,0,0,349.32,20.38Z" />
-            </svg>
+        <div class="arrow prev">
+            <img class="arrow-svg arrow-svg-2" src="resources/images/arrow.png" alt="arrow">
         </div>
-        <div class="arrow">
-            <svg id="Capa_2" class="arrow-svg" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 595.28 841.89">
-                <defs>
-                    <style>
-                        .cls-1 {
-                            fill: #fff;
-                        }
-                    </style>
-                </defs>
-                <title>Mesa de trabajo 1</title>
-                <path class="cls-1"
-                    d="M117.57,15H40.06A29.06,29.06,0,0,0,11,44.06L201.91,378.15a86,86,0,0,1,0,85.32L11,797.55a29.06,29.06,0,0,0,29.06,29.07h77.51a29.06,29.06,0,0,0,29.06-29.07L337.54,463.47a86,86,0,0,0,0-85.32L146.63,44.06A29.06,29.06,0,0,0,117.57,15Z" />
-                <path class="cls-1"
-                    d="M349.32,20.38h-77.5a29.06,29.06,0,0,0-29.06,29.07L433.67,383.53a86,86,0,0,1,0,85.32L242.76,802.94A29.06,29.06,0,0,0,271.82,832h77.5a29.06,29.06,0,0,0,29.07-29.06l190.9-334.09a86,86,0,0,0,0-85.32L378.39,49.45A29.06,29.06,0,0,0,349.32,20.38Z" />
-            </svg>
+        <div class="arrow next">
+            <img class="arrow-svg " src="resources/images/arrow.png" alt="arrow">
         </div>
     </div>
 
@@ -56,7 +35,21 @@
             </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="/">Servicios</a></li>
+                    <li>
+                        <div class="tooltip-menu">
+                            <a href="/">
+                                Servicios
+                            </a>
+                            <div class="tooltip">
+                                <ul>
+                                    <li><a href="https://facebook.com">Arte/Diseño</a></li>
+                                    <li><a class="link-menu pink" href="https://instagram.com">Música</a></li>
+                                    <li><a class="link-menu blue" href="https://twitter.com">Vídeo Juegos</a></li>
+                                    <li><a class="link-menu orange" href="https://google.com">Software</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="/">Contacto</a></li>
                     <li><a href="/">Nosotros</a></li>
                 </ul>
@@ -66,10 +59,16 @@
         <section class="info-section full-height-grow">
             <div class="info-card">
                 <div class="title">YOLOCOBI CRAFTS ARTS</div>
-            <div class="subtitle">
-                Deja la cratividad en nuestras manos, y desarrolla tus proyectos con nuestro servicio de creación de contenido artístico. Infórmate aquí sobre nuestros trabajos en el área de proyectos visuales.
-            </div>
-            <button class="welcome-button" type="button">Comenzar</button>
+                <div class="subtitle">
+                    Deja la cratividad en nuestras manos, y desarrolla tus proyectos con nuestro servicio de creación de
+                    contenido artístico. Infórmate aquí sobre nuestros trabajos en el área de proyectos visuales.
+                </div>
+
+                <form class="goToForm" action="https://facebook.com">
+                    <button class="welcome-button" value="/" type="submit">Comenzar</button>
+                </form>
+
+
             </div>
         </section>
     </div>
@@ -79,9 +78,12 @@
             <nav class="footer-nav">
                 <span>©Yolocobi Crafts 2020</span>
                 <ul>
-                    <li><a  href="https://www.facebook.com"><img class="footer-img" src="resources/images/fb.png"></a></li>
-                    <li><a  href="https://www.twitter.com"><img class="footer-img" src="resources/images/tw.png"></a></li>
-                    <li><a  href="https://www.instagram.com"><img class="footer-img" src="resources/images/ig.png"></a></li>
+                    <li><a href="https://www.facebook.com"><img class="footer-img" src="resources/images/fb.png"></a>
+                    </li>
+                    <li><a href="https://www.twitter.com"><img class="footer-img" src="resources/images/tw.png"></a>
+                    </li>
+                    <li><a href="https://www.instagram.com"><img class="footer-img" src="resources/images/ig.png"></a>
+                    </li>
                 </ul>
             </nav>
         </div>

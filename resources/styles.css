@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600;700;800;900&display=swap');
 
 
 
@@ -10,7 +10,7 @@
 body {
     padding:0;
     margin: 0;
-    background-color: white;
+    background-color: rgb(177, 169, 169);
     color: rgb(48, 47, 47);
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3em;
@@ -47,6 +47,7 @@ width: auto;
     display: flex;
     align-items: center;
     z-index: 1;
+    opacity: 0.7;
 }
 
 .footer-nav{
@@ -58,7 +59,7 @@ width: auto;
     color: inherit;
     text-decoration: none;
     padding: 1rem;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .footer-nav a{
@@ -76,9 +77,24 @@ width: auto;
 }
 
 .arrow{
-    height: 10vw;
-    width: 10vw;
-    opacity: 0.2;
+    height: 7vw;
+    width: 6vw;
+    opacity: 0.4;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.arrow.prev{
+    border-radius: 0 5px 5px 0;
+    padding:  1em 1em 1em 0.2em ;
+}
+
+.arrow.next{
+    border-radius:  5px 0 0 5px ;
+    padding:  1em 0.2em 1em 1em ;
 }
 
 .arrow-svg{
@@ -91,7 +107,7 @@ transform: rotate(180deg);
 }
 
 .main-nav a:hover{
-    color:rgb(163, 84, 194);
+    color:rgb(91, 60, 104);
 }
 
 .main-header{
@@ -112,14 +128,18 @@ transform: rotate(180deg);
     flex-grow: 1;
 }
 
-.background-image-1 {
+.slide {
     position: absolute;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
     z-index: -2;
-    box-shadow: inset 0px 120px 50px -30px rgb(255, 255, 255, 0.6), inset 0px -120px 50px -30px rgb(255, 255, 255, 0.6);
-  }
+    display: none;
+    }
+
+.slide.visible{
+    display: block;
+}
 
   .blur-box{
     position: absolute;
@@ -127,7 +147,7 @@ transform: rotate(180deg);
     width: 100vw;
     height: 100vh;
     /*box-shadow: inset 0px 120px 50px -30px rgb(255, 255, 255, 0.6), inset 0px -130px 50px -30px rgb(255, 255, 255, 0.3);*/
-    box-shadow: inset 0px 120px 50px -30px rgb(255, 255, 255, 0.6);
+    box-shadow: inset 0px 110px 50px -30px rgb(255, 255, 255, 0.6);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -135,16 +155,19 @@ transform: rotate(180deg);
 
 .arrow:hover{
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.6;
+}
+
+.prev, .next{
+    cursor: pointer;
 }
 
 .link-button{
     display:inline-block;
 }
 
-  .background-image-1::before {
+  .slide::before {
     content: '';
-    background-image: url(images/project.jpg);
     height: 120%;
     width: 120%;
     position: absolute;
@@ -155,36 +178,52 @@ transform: rotate(180deg);
     animation: Ugoku 30s ease-in-out infinite, fadein 2s; 
   }
 
+  .background-image-1::before{
+    background-image: url(images/design.jpg);
+  }
+
+  .background-image-2::before{
+    background-image: url(images/music.jpg);
+  }
+
+  .background-image-3::before{
+    background-image: url(images/games.jpg);
+  }
+
+  .background-image-4::before{
+    background-image: url(images/project.jpg);
+  }
+
   .title{
     font-size: 3.5em;
     font-weight: 800;
-    color:rgb(245, 235, 235);
-    text-shadow: 2px 2px #8d8d8d;
+    color:rgb(61, 61, 61);
 }
 
 .subtitle{
     font-size: 1.3em;
-    font-weight: 300;
-    color:black;
+    font-weight: light;
+    color:rgb(53, 52, 52);
 }
 
 .info-card{
-    width: 40%;
+    width: 45%;
     min-width: 500px;
     height: auto;
-    margin-top: 2rem;
-    margin-left: 3rem;
-    background-color: rgb(255, 255, 255, 0.2);
-    padding: 1rem;
+    margin-top: 4rem;
+    margin-left: 5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
     z-index: 1;
 }
 
 .welcome-button{
     background-color: transparent;
-    border: 2px solid #ffffff; /* Green */
-    color: white;
+    border: 2px solid #4e4d4d; 
+    color: #4e4d4d;
+    font-family: 2px;
     font-size: 1.5em;
-    font-weight: 100;
+    font-weight: 500;
     border-radius: 12px;
     padding: 0.2em;
     margin-top: 0.6em;
@@ -193,9 +232,52 @@ transform: rotate(180deg);
 
 .welcome-button:hover{
     cursor:pointer;
-    border: 2px solid #b3aeae; /* Green */
-    color: #b3aeae;
+    border: 2px solid #888686; 
+    color: #888686;
 }
+
+.tooltip{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 2.5rem;
+    display: none;
+    border-radius: 5px;
+    width: 15rem;
+    padding: 1em;
+}
+
+.tooltip ul li{
+    margin-bottom: 0.5em;
+}
+
+.link-menu.pink:hover{
+    color:rgb(207, 134, 152);
+    }
+
+.link-menu.blue:hover{
+        color:rgb(80, 107, 146);
+        }
+
+.link-menu.orange:hover{
+            color:rgb(180, 129, 100);
+            }
+
+.tooltip ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltip.visible{
+    display:block;
+}
+
+.tooltip-menu{
+    position: relative;
+}
+
+
 
   @keyframes fadein {
     from { opacity: 0; }
